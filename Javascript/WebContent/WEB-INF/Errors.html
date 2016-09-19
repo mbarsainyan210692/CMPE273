@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<label>Name :</label>
+<input type="text" id="name"/>
+<label>Chose a UserName :</label><button onclick="checkName()">Verify</button>
+<input type="text" id="username"/>
+<label>Chose a password :</label><button onclick="checkPassword()">Verify</button>
+<input type="text" id="password"/>
+<label>Email id :</label><button onclick="checkEmail()">Verify</button>
+<input type="text" id="email"/>
+<div id="response"></div>
+<button onClick="doNothing()">Submit</button>
+<script>
+function checkName()
+{
+	var name= document.getElementById('username');
+	try{
+	if(name==undefined||name.length==0)
+		{
+		throw "Username empty";
+		}
+	}
+	catch(err)
+	{
+		document.getElementById('response').innerHtml=err.message;
+	}
+}
+function checkPassword()
+{
+	var pwd= document.getElementById('password');
+	try{
+	if(pwd==undefined||pwd.length==0)
+		{
+		throw "Password empty";
+		}
+	}
+	catch(err)
+	{
+		document.getElementById('response').innerHtml=err.message;
+	}
+}
+function checkName()
+{
+	var email= document.getElementById('email');
+	try{
+	if(email==undefined||email.length==0)
+		{
+		throw "Username empty";
+		}
+	}
+	catch(err)
+	{
+		document.getElementById('response').innerHtml=err.message;
+	}
+}
+</script>
+</body>
+</html>
